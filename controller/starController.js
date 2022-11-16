@@ -3,8 +3,8 @@ const Stars = require("../models/Stars");
 const Videos = require("../models/Videos");
 
 const generateAverage = (data) => {
-    const averageCount = data?.reduce((acc, val) => acc.count + val.count, 0);
-    return averageCount
+    const averageCount = data?.reduce((acc, val) => acc + val.count, 0);
+    return Math.round((averageCount / data?.length)) || 0
 
 }
 

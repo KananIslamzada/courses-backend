@@ -36,6 +36,11 @@ const createStarSchema = Joi.object({
   videoId: Str.required()
 })
 
+const addProgressSchema = Joi.object({
+  userId: Str.required(),
+  videoId: Str.required()
+})
+
 const validateAsync = async (schema, value) =>
   await schema.validateAsync(value);
 
@@ -54,6 +59,7 @@ module.exports = {
   createVideoSchema,
   createCommentSchema,
   createStarSchema,
+  addProgressSchema,
   validateAsync,
   validate,
 };

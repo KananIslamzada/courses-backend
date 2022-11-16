@@ -6,6 +6,7 @@ const usersRouter = require("./routes/users");
 const commentsRouter = require("./routes/comments");
 const videosRouter = require('./routes/videos');
 const starsRouter = require('./routes/stars');
+const progressRouter = require('./routes/progress');
 
 require("dotenv/config");
 
@@ -17,6 +18,7 @@ app.use("/user", usersRouter);
 app.use("/video", videosRouter);
 app.use("/comment", commentsRouter);
 app.use("/star", starsRouter);
+app.use("/progress", progressRouter);
 
 app.get("/", (_, res) => {
   res.send("This is home");
