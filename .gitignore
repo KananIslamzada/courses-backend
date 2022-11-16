@@ -1,1 +1,5 @@
-*.rest
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
+request.rest
